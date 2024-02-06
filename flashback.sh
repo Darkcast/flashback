@@ -63,7 +63,8 @@ case $choice in
       print_message 32 "Devices found"
       print_message 32 "Sideloading RFIDTools 1.4.9"
       echo ""
-      adb install RFIDTools_1.4.9.apk
+      # install and or replace existing application
+      adb install -r RFIDTools_1.4.9.apk
     else
       print_message 31 "Error: adb devices not found.
       Make sure the phone is connected and developer mode is enabled and try again."
